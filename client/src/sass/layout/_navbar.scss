@@ -60,16 +60,18 @@
 }
 
 @media (min-width: 800px) {
-  .header .nav .menu {
-    display: block;
-  }
-  .header .nav .menu .items {
-    display: flex;
-  }
-  .header .nav .menu .items .item:not(:last-of-type) {
-    margin-right: 1rem;
-  }
-  .header .nav .menuIcon {
-    display: none;
+  .nav {
+    &--menu {
+      display: block;
+    }
+    &--items {
+      display: flex;
+      &--item:not(:last-of-type) {
+        margin-right: 1rem;
+      }
+    }
+    &--menuIcon {
+      display: none;
+    }
   }
 }
