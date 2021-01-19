@@ -1,5 +1,15 @@
 /* color */
-$color-primary: #fff;
+$color-white: #fff;
+$color-black: #333;
+
+$color-primary: rgb(230, 255, 160);
+$color-primary-light: rgb(248, 255, 228);
+$color-primary-dark: rgb(216, 255, 110);
+
+// $background-color-primary: rgb(230, 255, 160);
+// $background-color-secondary: rgb(230, 255, 160);
+// $background-color-primary: rgb(230, 255, 160);
+
 $section-primay-background-color: linear-gradient(
   to bottom right,
   rgb(70, 70, 70),
@@ -10,6 +20,10 @@ $section-secondary-background-color: linear-gradient(
   rgb(70, 70, 70),
   rgb(50, 50, 50)
 );
+
+body {
+  color: $color-primary-dark;
+}
 
 /* padding, margin */
 $section-padding: 4rem 1rem;
