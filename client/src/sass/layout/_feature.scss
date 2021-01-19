@@ -1,0 +1,17 @@
+.feature {
+  padding: $section-padding;
+  background: $section-primay-background-color;
+  &--title {
+    h2 {
+      font-size: $section-title-font-size;
+    }
+    h2,
+    p {
+      text-align: center;
+    }
+  }
+  &--content {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
