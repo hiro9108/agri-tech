@@ -1,0 +1,126 @@
+.auth {
+  position: relative;
+  height: 100vh;
+  background: linear-gradient(
+      to bottom right,
+      rgba(0, 0, 0, 0.397),
+      rgba(0, 0, 0, 0.205)
+    ),
+    url("../../../assets/images/auth/background.jpg");
+  background-position: center;
+  background-size: cover;
+
+  &--main {
+    height: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &--container {
+    width: 80vw;
+    height: 65vh;
+    display: flex;
+    &--image {
+      img {
+        display: none;
+        width: 100%;
+        height: 100%;
+        border-radius: $border-primary-radius;
+        object-fit: cover;
+      }
+    }
+    &--form {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      &--title {
+        position: absolute;
+        top: 0;
+        color: $color-white;
+        font-size: 2.5rem;
+        padding-top: 1rem;
+        text-transform: capitalize;
+        font-style: italic;
+      }
+      &--content {
+        position: relative;
+        margin-bottom: 3rem;
+        input {
+          width: 100%;
+          font-size: 1.5rem;
+          background: transparent;
+          outline: none;
+          border: none;
+          padding-bottom: 0.2rem;
+          letter-spacing: 1px;
+          border-bottom: 2px solid $color-white;
+        }
+        input[type="submit"] {
+          width: auto;
+          color: $color-white;
+          padding: 0.5rem 1rem;
+          border-radius: 0.2rem;
+          border: 1px solid $color-white;
+          cursor: pointer;
+          transition: all 0.2s linear;
+        }
+        input[type="submit"]:hover {
+          color: $color-black;
+          background-color: $color-white;
+        }
+
+        span {
+          position: absolute;
+          left: 0;
+          font-size: 1.2rem;
+          letter-spacing: 1px;
+          // display: inline-block;
+
+          pointer-events: none;
+          transition: all 0.2s linear;
+        }
+
+        input:focus ~ span,
+        input:valid ~ span {
+          transform: translateY(-24px);
+          color: rgb(218, 0, 0);
+        }
+      }
+
+      &--content:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .card:hover {
+    transform: translateY(0);
+  }
+
+  .card::before {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: skew(45deg) translateX(1400px);
+    transition: 0.3s;
+  }
+
+  .card:hover::before {
+    transform: skew(45deg) translateX(-300px);
+  }
+}
+@media (min-width: 800px) {
+  .auth {
+    &--container {
+      &--image {
+        flex: 1;
+        img {
+          display: block;
+          width: 100%;
+          height: 100%;
+          border-radius: $border-primary-radius;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+}

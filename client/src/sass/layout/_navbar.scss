@@ -76,9 +76,6 @@
       &--item {
         margin: 2rem 0;
       }
-      &--item:first-of-type {
-        display: none;
-      }
       &--item:not(:last-of-type) {
         margin-right: 1rem;
       }
