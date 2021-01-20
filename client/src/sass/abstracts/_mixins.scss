@@ -1,0 +1,15 @@
+/* glass design */
+@mixin glass-design {
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  border-left: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 5px 45px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+@mixin section-basic {
+  color: $color-black;
+  padding: $section-padding;
+  background: $color-section-linear-background;
+}

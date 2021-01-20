@@ -1,15 +1,24 @@
+/* Common */
 @import "base/reset";
+@import "base/typography";
 
 @import "abstracts/variables";
+@import "abstracts/mixins";
 
 @import "components/cards";
 @import "components/buttons";
 
-@import "layout/header";
 @import "layout/navbar";
-// @import "layout/main";
-@import "layout/feature";
-@import "layout/animation";
-@import "layout/gallary";
-@import "layout/contact";
 @import "layout/footer";
+
+/* Landing page */
+@import "pages/landing/header";
+// @import "pages/landing/main";
+@import "pages/landing/feature";
+@import "pages/landing/movie";
+@import "pages/landing/function";
+@import "pages/landing/gallary";
+@import "pages/landing/contact";
+
+/* Signup page */
+@import "pages/signup/body";

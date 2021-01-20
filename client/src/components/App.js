@@ -1,15 +1,20 @@
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import "../sass/main.scss";
 
-import Header from "./Header/Header";
-import Main from "./Main/Main";
-import Footer from "./Footer/Footer";
+import Landing from "./Landing/Landing";
+import Signup from "./Signup/Signup";
+import Signin from "./Signin/Signin";
 
 const App = () => {
   return (
     <>
-      <Header />
-      <Main />
-      <Footer />
+      <Router>
+        <Switch>
+          <Route exact path="/" component={Landing} />
+          <Route exact path="/signup" component={Signup} />
+          <Route exact path="/signin" component={Signin} />
+        </Switch>
+      </Router>
     </>
   );
 };
