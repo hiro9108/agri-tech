@@ -55,7 +55,7 @@
       }
       50% {
         opacity: 1;
-        background: url(https://source.unsplash.com/1600x900/?agriculture);
+        background: url($random-images-url);
         background-position: center;
         background-size: cover;
         background-attachment: fixed;
