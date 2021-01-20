@@ -1,0 +1,33 @@
+.auth {
+  height: 100vh;
+  background: linear-gradient(
+      to bottom right,
+      rgba(0, 0, 0, 0.397),
+      rgba(0, 0, 0, 0.205)
+    ),
+    url("../../../assets/images/signup.jpg");
+  background-position: center;
+  background-size: cover;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &--container {
+    width: 80vw;
+    height: 65vh;
+  }
+
+  .card:hover {
+    transform: translateY(0);
+  }
+
+  .card::before {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: skew(45deg) translateX(1400px);
+    transition: 0.3s;
+  }
+
+  .card:hover::before {
+    transform: skew(45deg) translateX(-300px);
+  }
+}

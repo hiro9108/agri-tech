@@ -6,9 +6,17 @@ $color-primary: rgb(230, 255, 160);
 $color-primary-light: rgb(248, 255, 228);
 $color-primary-dark: rgb(216, 255, 110);
 
-// $background-color-primary: rgb(230, 255, 160);
-// $background-color-secondary: rgb(230, 255, 160);
-// $background-color-primary: rgb(230, 255, 160);
+$color-section-linear-background: linear-gradient(
+  to bottom,
+  $color-primary-light,
+  $color-primary
+);
+
+$color-btn-linear-background: linear-gradient(
+  to bottom right,
+  $color-primary-light,
+  $color-primary
+);
 
 $section-primay-background-color: linear-gradient(
   to bottom right,
@@ -21,12 +29,12 @@ $section-secondary-background-color: linear-gradient(
   rgb(50, 50, 50)
 );
 
-body {
-  color: $color-primary-dark;
-}
-
 /* padding, margin */
 $section-padding: 4rem 1rem;
 
 /* font size */
-$section-title-font-size: 2.4rem;
+// $section-title-font-size: 2.4rem;
+$section-title-font-size: 6vw;
+
+/* border-radius */
+$border-primary-radius: 0.5rem;

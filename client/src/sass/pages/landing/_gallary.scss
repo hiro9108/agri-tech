@@ -1,0 +1,12 @@
+.gallary {
+  &--container {
+    display: flex;
+    overflow-x: scroll;
+    @media (min-width: 680px) {
+      display: grid;
+      grid-template:
+        "top-left top top-right"
+        "bottom-left bottom bottom-right";
+    }
+  }
+}
