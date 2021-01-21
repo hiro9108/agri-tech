@@ -17,18 +17,6 @@
       &--text {
         color: $color-white;
         text-transform: uppercase;
-        animation-name: fadein-header-title;
-        animation-duration: 3s;
-      }
-      @keyframes fadein-header-title {
-        0% {
-          opacity: 0;
-          transform: translateY(50px);
-        }
-        100% {
-          opacity: 100%;
-          transform: translateY(0);
-        }
       }
     }
   }
