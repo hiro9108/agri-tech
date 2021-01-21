@@ -1,9 +1,9 @@
 /* Common */
-@import "base/reset";
-@import "base/typography";
-
 @import "abstracts/variables";
 @import "abstracts/mixins";
+
+@import "base/reset";
+@import "base/typography";
 
 @import "components/cards";
 @import "components/buttons";
@@ -13,10 +13,9 @@
 
 /* Landing page */
 @import "pages/landing/header";
-// @import "pages/landing/main";
 @import "pages/landing/feature";
 @import "pages/landing/movie";
-@import "pages/landing/function";
+@import "pages/landing/mobile";
 @import "pages/landing/gallary";
 @import "pages/landing/contact";
 

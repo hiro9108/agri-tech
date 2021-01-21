@@ -2,41 +2,49 @@
   position: relative;
   height: 100vh;
   overflow: hidden;
-
   &--main {
     height: 400px;
     width: 300px;
     margin: auto;
-    background-color: lightblue;
     &--title {
       position: absolute;
       top: 50%;
       left: 50%;
       transform: translateX(-50%) translateY(-50%);
       text-align: center;
-      font-size: 8vw;
-      color: white;
+      font-size: 6vw;
       z-index: 1;
       &--text {
-        color: white;
+        color: $color-white;
+        text-transform: uppercase;
+        animation-name: fadein-header-title;
+        animation-duration: 3s;
+      }
+      @keyframes fadein-header-title {
+        0% {
+          opacity: 0;
+          transform: translateY(50px);
+        }
+        100% {
+          opacity: 100%;
+          transform: translateY(0);
+        }
       }
     }
   }
-
   &--wrap {
     position: absolute;
     top: 0;
     left: 0;
     display: flex;
     flex-wrap: wrap;
-    background-color: #333;
+    background-color: $color-black;
     &--block {
       position: relative;
       top: 0;
       left: 0;
       width: 5vw;
       height: 5vh;
-      // background-color: red;
       animation: animate 0.75s ease-in-out forwards;
     }
     &--block:nth-child(even) {
@@ -63,7 +71,7 @@
       100% {
         opacity: 1;
         transform: scale(1) translateY(0px);
-        background: url(https://source.unsplash.com/1600x900/?agriculture);
+        background: url($random-images-url);
         background-position: center;
         background-size: cover;
         background-attachment: fixed;

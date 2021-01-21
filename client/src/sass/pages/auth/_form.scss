@@ -53,8 +53,12 @@
           outline: none;
           border: none;
           padding-bottom: 0.2rem;
-          letter-spacing: 1px;
           border-bottom: 2px solid $color-white;
+          &:focus ~ span,
+          &:valid ~ span {
+            transform: translateY(-24px);
+            color: rgb(218, 0, 0);
+          }
         }
         input[type="submit"] {
           width: auto;
@@ -64,51 +68,38 @@
           border: 1px solid $color-white;
           cursor: pointer;
           transition: all 0.2s linear;
+          &:hover {
+            color: $color-black;
+            background-color: $color-white;
+          }
         }
-        input[type="submit"]:hover {
-          color: $color-black;
-          background-color: $color-white;
-        }
-
         span {
           position: absolute;
           left: 0;
           font-size: 1.2rem;
           letter-spacing: 1px;
-          // display: inline-block;
-
           pointer-events: none;
           transition: all 0.2s linear;
         }
-
-        input:focus ~ span,
-        input:valid ~ span {
-          transform: translateY(-24px);
-          color: rgb(218, 0, 0);
+        &:last-of-type {
+          margin-bottom: 0;
         }
-      }
-
-      &--content:last-of-type {
-        margin-bottom: 0;
       }
     }
   }
-
   .card:hover {
     transform: translateY(0);
+    &::before {
+      transform: skew(45deg) translateX(-300px);
+    }
   }
-
   .card::before {
     background-color: rgba(255, 255, 255, 0.2);
     transform: skew(45deg) translateX(1400px);
     transition: 0.3s;
   }
-
-  .card:hover::before {
-    transform: skew(45deg) translateX(-300px);
-  }
 }
-@media (min-width: 800px) {
+@media (min-width: $media-query-size-md) {
   .auth {
     &--container {
       &--image {

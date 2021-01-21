@@ -1,0 +1,57 @@
+.mobile {
+  @include section-basic;
+  h2 {
+    font-size: $section-title-font-size;
+    text-transform: uppercase;
+    text-align: center;
+  }
+  &--container {
+    &--image {
+      height: 50%;
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      img {
+        width: 50%;
+        min-width: 300px;
+      }
+    }
+    &--content {
+      height: 500px;
+      flex: 1;
+      &--box {
+        height: inherit;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      &--text {
+        h3 {
+          text-align: center;
+          text-transform: uppercase;
+        }
+        p {
+          display: inline-block;
+          margin: 2rem 0 4rem 0;
+        }
+      }
+      &--link {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img {
+          width: 25%;
+          min-width: 50px;
+          max-width: 100px;
+          margin: 0 2rem;
+        }
+      }
+    }
+    @media (min-width: 800px) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}

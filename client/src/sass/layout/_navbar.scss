@@ -3,7 +3,7 @@
   justify-content: space-between;
   align-items: center;
   width: 100vw;
-  padding: 0 5vw;
+  padding: $navbar-padding;
   position: fixed;
   z-index: 12;
   @include glass-design;
@@ -11,9 +11,9 @@
     &--image {
       width: 100px;
       transition: all 0.2s linear;
-    }
-    &--image:hover {
-      transform: scale(1.1) translateY(-2px);
+      &:hover {
+        transform: scale(1.1) translateY(-2px);
+      }
     }
   }
   &--menu {
@@ -23,15 +23,14 @@
       margin: 4rem 0;
       font-size: 1.5rem;
       color: $color-black;
-      // text-align: center;
       text-transform: uppercase;
-
       a {
         color: $color-black;
         transition: all 0.2s linear;
-      }
-      a:hover {
-        color: red;
+        font-family: $font-family-nav-btn-link;
+        &:hover {
+          color: red;
+        }
       }
     }
   }
@@ -42,9 +41,9 @@
     cursor: pointer;
     i {
       transition: all 0.2s linear;
-    }
-    i:hover {
-      transform: scale(1.1) translateY(-2px);
+      &:hover {
+        transform: scale(1.1) translateY(-2px);
+      }
     }
   }
 }
@@ -66,7 +65,7 @@
   display: none;
 }
 
-@media (min-width: 800px) {
+@media (min-width: $media-query-size-md) {
   .nav {
     &--menu {
       display: block;
@@ -86,10 +85,10 @@
         border: 1px solid $color-primary-dark;
         border-radius: $border-primary-radius;
         transition: all 0.2s linear;
-      }
-      a:hover {
-        color: $color-primary-dark;
-        background: $color-white;
+        &:hover {
+          color: $color-primary-dark;
+          background: $color-white;
+        }
       }
     }
     &--menuIcon {
