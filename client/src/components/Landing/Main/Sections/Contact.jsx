@@ -8,7 +8,10 @@ const Contact = () => {
       </div>
       <div className="contact--content">
         <div className="card">
-          <form className="contact--form">
+          <form
+            className="contact--form"
+            onSubmit={(e) => alert("I am working on")}
+          >
             <div className="contact--form--group">
               <div className="contact--form--label">
                 <label htmlFor="name">full name</label>
@@ -40,7 +43,12 @@ const Contact = () => {
               </div>
             </div>
             <div className="contact--form--btn--field">
-              <input type="submit" value="send" />
+              <input
+                type="submit"
+                value="send"
+                // disabled
+                onClick={() => alert("I am working on")}
+              />
             </div>
           </form>
         </div>
