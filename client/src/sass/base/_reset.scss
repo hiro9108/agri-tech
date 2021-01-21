@@ -6,6 +6,7 @@
 
 body {
   font-family: sans-serif;
+  overflow-x: hidden; // For mobile device
 }
 
 a {
@@ -38,6 +39,6 @@ label {
 }
 
 input[type="submit"] {
-  -webkit-appearance: none;
+  -webkit-appearance: button;
   border-radius: 0;
 }
