@@ -4,7 +4,7 @@ import Navbar from "../Navbar/Navbar";
 const AuthForm = (props) => {
   return (
     <div className="auth">
-      <Navbar />
+      {/* <Navbar /> */}
       <div className="auth--main">
         <div className="card auth--container">
           <div className="auth--container--image">
