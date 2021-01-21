@@ -1,6 +1,7 @@
 .gallary {
   &--container {
     display: flex;
+    align-items: center;
     overflow-x: scroll;
     @media (min-width: $media-query-size-sm) {
       display: grid;

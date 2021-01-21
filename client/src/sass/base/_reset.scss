@@ -36,3 +36,8 @@ label {
   font-family: $font-family-form;
   letter-spacing: 0.1rem;
 }
+
+input[type="submit"] {
+  -webkit-appearance: none;
+  border-radius: 0;
+}

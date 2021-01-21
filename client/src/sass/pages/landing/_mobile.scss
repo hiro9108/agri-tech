@@ -7,7 +7,6 @@
   }
   &--container {
     &--image {
-      height: 50%;
       flex: 1;
       display: flex;
       justify-content: center;
@@ -18,10 +17,9 @@
       }
     }
     &--content {
-      height: 500px;
       flex: 1;
+      margin: 4rem 0;
       &--box {
-        height: inherit;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -48,7 +46,7 @@
         }
       }
     }
-    @media (min-width: 800px) {
+    @media (min-width: $media-query-size-md) {
       display: flex;
       justify-content: center;
       align-items: center;

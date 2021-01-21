@@ -53,7 +53,7 @@
         opacity: 1;
         background: url($random-images-url);
         background-position: center;
-        background-size: cover;
+        // background-size: cover;
         background-attachment: fixed;
       }
       100% {
@@ -61,7 +61,7 @@
         transform: scale(1) translateY(0px);
         background: url($random-images-url);
         background-position: center;
-        background-size: cover;
+        // background-size: cover;
         background-attachment: fixed;
       }
     }

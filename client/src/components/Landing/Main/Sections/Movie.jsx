@@ -14,7 +14,7 @@ const Movie = () => {
           }
         >
           <h3>How</h3>
-          <video src={Movie01} muted loop autoPlay />
+          <video src={Movie01} muted loop autoPlay playsInline />
         </div>
         <div
           className="movie--container--box movie--container--box--02"
@@ -23,7 +23,7 @@ const Movie = () => {
           }
         >
           <h3>What</h3>
-          <video src={Movie02} muted loop autoPlay />
+          <video src={Movie02} muted loop autoPlay playsInline />
         </div>
         <div
           className="movie--container--box movie--container--box--03"
@@ -32,7 +32,7 @@ const Movie = () => {
           }
         >
           <h3>Why</h3>
-          <video src={Movie03} muted loop autoPlay />
+          <video src={Movie03} muted loop autoPlay playsInline />
         </div>
       </div>
     </section>
