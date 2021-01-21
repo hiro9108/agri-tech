@@ -26,7 +26,11 @@ const AuthForm = (props) => {
                 </div>
               ))}
               <div className="auth--container--form--content">
-                <input type="submit" value={props.submit} />
+                <input
+                  type="submit"
+                  value={props.submit}
+                  onClick={() => alert("I Am Working On")}
+                />
               </div>
             </form>
           </div>
