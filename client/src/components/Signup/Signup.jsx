@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Navbar from "../UI/Navbar/Navbar";
 import AuthForm from "../UI/AuthForm/AuthForm";
 
@@ -10,6 +10,9 @@ const LABEL_TITLE = "sign up";
 const LABEL_SUBMIT = "Signup";
 
 const Signup = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div className="auth">
       <Navbar />
