@@ -15,13 +15,6 @@
       width: auto;
       &:hover {
         transform: none;
-        &::before {
-          transform: skew(45deg) translateX(-300px);
-        }
-      }
-      &::before {
-        background-color: rgba(255, 255, 255, 0.5);
-        transform: skew(45deg) translateX(850px);
       }
     }
   }
@@ -58,7 +51,7 @@
         color: $color-black;
         padding: 0.5rem 1rem;
         border-radius: 0.2rem;
-        border: 1px solid $color-white;
+        border: 2px solid $color-white;
         cursor: pointer;
         transition: all 0.2s linear;
         &:hover {

@@ -12,12 +12,9 @@
 
   &--main {
     position: relative;
-    // top: 0;
-    // height: inherit;
     padding-top: 150px;
     display: flex;
     justify-content: center;
-    // margin: 5rem 0;
     align-items: center;
   }
   &--container {
@@ -40,13 +37,9 @@
       justify-content: center;
       align-items: center;
       &--title {
-        // position: absolute;
-        // top: 0;
         color: $color-white;
         font-size: 2.5rem;
-        // padding-top: 1rem;
         margin-bottom: 4rem;
-        // text-align: center;
         text-transform: capitalize;
         font-style: italic;
       }
@@ -95,30 +88,12 @@
     }
   }
   .card {
-    // width: 300px;
     height: initial;
     margin: initial;
-    // margin-top: 5rem;
-    // padding: 1rem;
-    // overflow: hidden;
     &:hover {
       transform: translateY(0);
-      // &::before {
-      //   transform: skew(45deg) translateX(-300px);
-      // }
     }
   }
-  .card:hover {
-    transform: translateY(0);
-    // &::before {
-    //   transform: skew(45deg) translateX(-300px);
-    // }
-  }
-  // .card::before {
-  //   background-color: rgba(255, 255, 255, 0.2);
-  //   transform: skew(45deg) translateX(1400px);
-  //   transition: 0.3s;
-  // }
 }
 @media (min-width: $media-query-size-md) {
   .auth {

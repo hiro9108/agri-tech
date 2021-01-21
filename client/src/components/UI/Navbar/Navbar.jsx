@@ -34,9 +34,9 @@ const Navbar = () => {
     <>
       <nav className="nav">
         <div className="nav--logo">
-          <a className="nav--logo--link" href="/">
-            <img className="nav--logo--image" src={logo} alt="" />
-          </a>
+          <Link to="/">
+            <img className="nav--logo--image" src={logo} alt="logo" />
+          </Link>
         </div>
         <div className="nav--menu close" ref={menuRef}>
           <ul className="nav--items">
@@ -71,6 +71,7 @@ const Navbar = () => {
         ref={backScreenRef}
         onClick={backScreenHandler}
       />
+      <div className="nav--wrap" />
     </>
   );
 };
