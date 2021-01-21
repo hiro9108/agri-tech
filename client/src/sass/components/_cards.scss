@@ -5,23 +5,23 @@
   padding: 1rem;
   border-radius: $border-primary-radius;
   transition: 0.3s;
-  overflow: hidden;
+  // overflow: hidden;
   @include glass-design;
   &:hover {
     transform: translateY(-20px);
-    &::before {
-      transform: skew(45deg) translateX(-300px);
-    }
+    // &::before {
+    //   transform: skew(45deg) translateX(-300px);
+    // }
   }
-  &::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 50px;
-    height: 100%;
-    background-color: rgba(255, 255, 255, 0.5);
-    transform: skew(45deg) translateX(500px);
-    transition: 0.3s;
-  }
+  // &::before {
+  //   content: "";
+  //   position: absolute;
+  //   top: 0;
+  //   left: 0;
+  //   width: 50px;
+  //   height: 100%;
+  //   background-color: rgba(255, 255, 255, 0.5);
+  //   transform: skew(45deg) translateX(500px);
+  //   transition: 0.3s;
+  // }
 }
