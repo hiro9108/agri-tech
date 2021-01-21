@@ -10,7 +10,6 @@ body {
 
 a {
   text-decoration: none;
-  font-family: "Crimson Text", serif;
 }
 
 p {
@@ -28,4 +27,12 @@ ul {
 img {
   width: 100%;
   display: block;
+}
+
+input[type="text"],
+input[type="email"],
+textarea,
+label {
+  font-family: $font-family-form;
+  letter-spacing: 0.1rem;
 }

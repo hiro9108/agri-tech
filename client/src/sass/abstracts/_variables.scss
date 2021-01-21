@@ -30,7 +30,8 @@ $section-secondary-background-color: linear-gradient(
 );
 
 /* padding, margin */
-$section-padding: 4rem 1rem;
+$navbar-padding: 0 5vw;
+$section-padding: 4rem 5vw;
 
 /* font size */
 // $section-title-font-size: 2.4rem;
@@ -40,5 +41,13 @@ $section-title-font-size: 6vw;
 $border-primary-radius: 0.5rem;
 $border-form-radius: 0.3rem;
 
+/* font-family */
+$font-family-nav-btn-link: "Crimson Text", serif;
+$font-family-form: "Times New Roman", Times, serif;
+
 /* image url */
 $random-images-url: "https://source.unsplash.com/1600x900/?agriculture";
+
+/* sm:gallary  md:navbar,authForm */
+$media-query-size-sm: 680px;
+$media-query-size-md: 800px;

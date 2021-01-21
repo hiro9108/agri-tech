@@ -6,7 +6,10 @@ const Feature = () => {
       <div className="feature--title">
         <h2>what is the feature</h2>
         <p>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo nobis
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas
+          libero aperiam sed repellat. Possimus ipsam alias harum obcaecati,
+          minus est eum, quia quidem ipsa voluptatum molestiae quas illo
+          assumenda numquam.
         </p>
       </div>
       <div className="feature--content">

@@ -2,7 +2,7 @@
   &--container {
     display: flex;
     overflow-x: scroll;
-    @media (min-width: 680px) {
+    @media (min-width: $media-query-size-sm) {
       display: grid;
       grid-template:
         "top-left top top-right"
