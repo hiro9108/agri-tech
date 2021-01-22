@@ -13,3 +13,18 @@
   padding: $section-padding;
   background: $color-section-linear-background;
 }
+
+@mixin subtitle-underline {
+  content: "";
+  height: 2px;
+  width: 20vw;
+  display: block;
+  margin: 1rem auto 2rem auto;
+  background-color: $color-underline-red;
+}
+
+@mixin subtitle-format {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: $section-title-font-size;
+}
