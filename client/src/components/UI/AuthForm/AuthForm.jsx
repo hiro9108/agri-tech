@@ -6,7 +6,7 @@ const AuthForm = (props) => {
     <div className="auth">
       {/* <Navbar /> */}
       <div className="auth--main">
-        <div className="auth--container">
+        <div className="card auth--container">
           <div className="auth--container--image">
             <img src={props.image} alt="signup" />
           </div>
