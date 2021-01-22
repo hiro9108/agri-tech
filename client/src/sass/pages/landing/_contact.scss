@@ -2,9 +2,10 @@
   @include section-basic;
   &--title {
     h2 {
-      text-align: center;
-      font-size: $section-title-font-size;
-      text-transform: uppercase;
+      @include subtitle-format;
+      &::after {
+        @include subtitle-underline;
+      }
     }
     @media (min-width: $media-query-size-md) {
       h2 {

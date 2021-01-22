@@ -1,9 +1,10 @@
 .mobile {
   @include section-basic;
   h2 {
-    font-size: $section-title-font-size;
-    text-transform: uppercase;
-    text-align: center;
+    @include subtitle-format;
+    &::after {
+      @include subtitle-underline;
+    }
   }
   @media (min-width: $media-query-size-md) {
     h2 {
