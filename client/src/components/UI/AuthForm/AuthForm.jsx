@@ -10,7 +10,7 @@ const AuthForm = (props) => {
           <div className="auth--container--image">
             <img src={props.image} alt="signup" />
           </div>
-          <div className="auth--container--form">
+          <div className="card auth--container--form">
             <h2 className="auth--container--form--title">{props.title}</h2>
             <form className="auth--container--form--group">
               {props.labelTexts.map((label) => (
