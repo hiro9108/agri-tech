@@ -2,13 +2,13 @@
   position: relative;
   height: calc(100vh + 300px);
   background: linear-gradient(
-      to bottom,
-      rgba(black, 0.4),
-      rgba($color-black, 0.7)
+      to bottom right,
+      rgba($color-black, 0.5),
+      rgba($color-black, 0.6)
     ),
     url("../../../assets/images/auth/background.jpg");
   background-position: center;
-  // background-size: cover;
+  background-size: cover;
 
   &--main {
     position: relative;
