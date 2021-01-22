@@ -6,11 +6,11 @@ const AuthForm = (props) => {
     <div className="auth">
       {/* <Navbar /> */}
       <div className="auth--main">
-        <div className="card auth--container">
+        <div className="auth--container">
           <div className="auth--container--image">
             <img src={props.image} alt="signup" />
           </div>
-          <div className="card auth--container--form">
+          <div className="auth--container--form">
             <h2 className="auth--container--form--title">{props.title}</h2>
             <form className="auth--container--form--group">
               {props.labelTexts.map((label) => (
