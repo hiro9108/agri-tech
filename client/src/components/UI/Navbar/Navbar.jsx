@@ -8,26 +8,23 @@ const Navbar = () => {
   const closeIconRef = useRef();
   const backScreenRef = useRef();
 
-  // Todo: refactoring
+  const commonHandler = (primary, secondary) => {
+    menuIconRef.current.className = `nav--menuIcon ${primary}`;
+    menuRef.current.className = `nav--menu ${secondary}`;
+    closeIconRef.current.className = `nav--closeIcon ${secondary}`;
+    backScreenRef.current.className = `backScreen ${secondary}`;
+  };
+
   const menuIconHandler = () => {
-    menuIconRef.current.className = "nav--menuIcon close";
-    menuRef.current.className = "nav--menu open";
-    closeIconRef.current.className = "nav--closeIcon open";
-    backScreenRef.current.className = "backScreen open";
+    commonHandler("close", "open");
   };
 
   const closeIconHandler = () => {
-    menuIconRef.current.className = "nav--menuIcon open";
-    menuRef.current.className = "nav--menu close";
-    closeIconRef.current.className = "nav--closeIcon close";
-    backScreenRef.current.className = "backScreen close";
+    commonHandler("open", "close");
   };
 
   const backScreenHandler = () => {
-    menuIconRef.current.className = "nav--menuIcon open";
-    menuRef.current.className = "nav--menu close";
-    closeIconRef.current.className = "nav--closeIcon close";
-    backScreenRef.current.className = "backScreen close";
+    commonHandler("open", "close");
   };
 
   return (
