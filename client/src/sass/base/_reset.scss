@@ -39,9 +39,13 @@ label {
   letter-spacing: 0.1rem;
   border: none;
   -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }
 
 input[type="submit"] {
-  -webkit-appearance: none;
   border-radius: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }

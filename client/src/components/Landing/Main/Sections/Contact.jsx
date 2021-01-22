@@ -14,7 +14,7 @@ const Contact = () => {
                 <label htmlFor="name">full name</label>
               </div>
               <div className="contact--form--text--field">
-                <input type="text" id="name" placeholder="Full Name" required />
+                <input type="text" id="name" placeholder="Full Name" />
               </div>
             </div>
             <div className="contact--form--group">
@@ -22,7 +22,7 @@ const Contact = () => {
                 <label htmlFor="email">email</label>
               </div>
               <div className="contact--form--text--field">
-                <input type="email" id="email" placeholder="Email" required />
+                <input type="email" id="email" placeholder="Email" />
               </div>
             </div>
             <div className="contact--form--group">
@@ -35,7 +35,6 @@ const Contact = () => {
                   cols="30"
                   rows="10"
                   placeholder="Your message..."
-                  required
                 />
               </div>
             </div>

@@ -78,6 +78,8 @@
           left: 0;
           font-size: 1.2rem;
           letter-spacing: 1px;
+          color: $color-black;
+          font-family: $font-family-form;
           pointer-events: none;
           transition: all 0.2s linear;
         }
