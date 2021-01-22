@@ -1,15 +1,14 @@
 .auth {
   position: relative;
   height: calc(100vh + 300px);
-  // background: url("../../../assets/images/auth/background.jpg");
-  // background: linear-gradient(
-  //     to bottom right,
-  //     rgba(0, 0, 0, 0.7),
-  //     rgba(0, 0, 0, 0.8)
-  //   ),
-  //   url("../../../assets/images/auth/background.jpg");
-  background-position: center;
-  background-size: cover;
+  background: linear-gradient(
+      to bottom right,
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+    ),
+    url("../../../assets/images/auth/background.jpg");
+  // background-position: center;
+  // background-size: cover;
 
   &--main {
     position: relative;
