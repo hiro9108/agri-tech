@@ -1,13 +1,12 @@
 .auth {
   position: relative;
   height: calc(100vh + 300px);
-  background-color: coral;
-  // background: linear-gradient(
-  //     to bottom right,
-  //     rgba(0, 0, 0, 0.397),
-  //     rgba(0, 0, 0, 0.205)
-  //   ),
-  //   url("../../../assets/images/auth/background.jpg");
+  background: linear-gradient(
+      to bottom right,
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.6)
+    ),
+    url("../../../assets/images/auth/background.jpg");
   background-position: center;
   background-size: cover;
 
