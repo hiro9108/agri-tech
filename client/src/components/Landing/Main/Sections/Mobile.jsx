@@ -15,7 +15,7 @@ const Mobile = () => {
         <div className="mobile--container--content">
           <div className="mobile--container--content--box">
             <div className="mobile--container--content--text">
-              <h3>useful app</h3>
+              <h3>functions</h3>
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit
                 obcaecati, architecto dolores, repellat, perspiciatis voluptate

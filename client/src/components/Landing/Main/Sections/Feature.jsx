@@ -4,7 +4,7 @@ const Feature = () => {
   return (
     <section className="feature">
       <div className="feature--title">
-        <h2>what is the feature</h2>
+        <h2>feature</h2>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas
           libero aperiam sed repellat. Possimus ipsam alias harum obcaecati,

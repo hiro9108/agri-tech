@@ -13,7 +13,7 @@ const Movie = () => {
             e.target.classList.toggle("movie--container--box--active")
           }
         >
-          <h3>How</h3>
+          <h3>HOW</h3>
           <video src={Movie01} muted loop autoPlay playsInline />
         </div>
         <div
@@ -22,7 +22,7 @@ const Movie = () => {
             e.target.classList.toggle("movie--container--box--active")
           }
         >
-          <h3>What</h3>
+          <h3>WHAT</h3>
           <video src={Movie02} muted loop autoPlay playsInline />
         </div>
         <div
@@ -31,7 +31,7 @@ const Movie = () => {
             e.target.classList.toggle("movie--container--box--active")
           }
         >
-          <h3>Why</h3>
+          <h3>WHY</h3>
           <video src={Movie03} muted loop autoPlay playsInline />
         </div>
       </div>
