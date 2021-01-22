@@ -34,7 +34,7 @@
       width: 5vw;
       height: 5vh;
       background-size: cover;
-      background-position: center;
+      background-position: bottom;
       background-attachment: fixed;
       animation: animate 0.75s ease-in-out forwards;
     }
@@ -54,17 +54,17 @@
       }
       50% {
         opacity: 1;
-        // background: url($random-images-url);
-        // background-size: cover;
-        // background-position: center;
-        // background-attachment: fixed;
+        background: url($random-images-url);
+        background-size: cover;
+        background-position: bottom;
+        background-attachment: fixed;
       }
       100% {
         opacity: 1;
         transform: scale(1) translateY(0px);
         background: url($random-images-url);
-        // background-size: cover;
-        // background-position: center;
+        background-size: cover;
+        background-position: bottom;
         background-attachment: fixed;
       }
     }
