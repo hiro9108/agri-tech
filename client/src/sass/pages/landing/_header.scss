@@ -54,7 +54,7 @@
       50% {
         opacity: 1;
         background: url("../../../assets/images/header.jpg");
-        background-size: auto;
+        background-size: auto auto;
         background-repeat: no-repeat;
         background-position: center;
         background-attachment: fixed;
@@ -63,7 +63,7 @@
         opacity: 1;
         transform: scale(1) translateY(0px);
         background: url("../../../assets/images/header.jpg");
-        background-size: auto;
+        background-size: auto auto;
         background-repeat: no-repeat;
         background-position: center;
         background-attachment: fixed;
