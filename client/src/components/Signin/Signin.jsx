@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-import Navbar from "../UI/Navbar/Navbar";
 import AuthForm from "../UI/AuthForm/AuthForm";
 
 import Image from "../../assets/images/auth/signin/signin.jpg";
@@ -14,8 +13,7 @@ const Signin = () => {
     window.scrollTo(0, 0);
   }, []);
   return (
-    <div className="auth">
-      <Navbar />
+    <>
       <AuthForm
         title={LABEL_TITLE}
         image={Image}
@@ -23,7 +21,7 @@ const Signin = () => {
         password={LABEL_PASSWORD}
         submit={LABEL_SUBMIT}
       />
-    </div>
+    </>
   );
 };
 
