@@ -34,8 +34,7 @@
       left: 0;
       width: 5vw;
       height: 5vh;
-      // background-size: contain;
-      background-repeat: no-repeat;
+      background-size: cover;
       background-position: center;
       background-attachment: fixed;
       animation: animate 0.75s ease-in-out forwards;
@@ -59,8 +58,7 @@
         opacity: 1;
         // background: url("../../../assets/images/header.jpg");
         background: url($random-images-url);
-        // background-size: contain;
-        background-repeat: no-repeat;
+        background-size: cover;
         background-position: center;
         background-attachment: fixed;
       }
@@ -69,8 +67,7 @@
         transform: scale(1) translateY(0px);
         // background: url("../../../assets/images/header.jpg");
         background: url($random-images-url);
-        // background-size: contain;
-        background-repeat: no-repeat;
+        background-size: cover;
         background-position: center;
         background-attachment: fixed;
       }
