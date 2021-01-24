@@ -50,6 +50,7 @@
       0% {
         opacity: 0;
         transform: scale(0) translateY(1000px);
+        background-color: $color-white;
       }
       50% {
         opacity: 1;
