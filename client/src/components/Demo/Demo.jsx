@@ -1,8 +1,20 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 import "./Demo.css";
 import Navbar from "../../components/UI/Navbar/Navbar";
 
 const Demo = () => {
+  const [test, setTest] = useState([]);
+  useEffect(() => {
+    axios
+      .get(`https://create-api-000.herokuapp.com/api/products/`)
+      .then((response) => {
+        console.log(response.data);
+        setTest(response.data.reverse()); // Set product data
+      })
+      .catch((error) => console.log(error));
+  }, []);
+
   return (
     <>
       <Navbar />
@@ -25,6 +37,19 @@ const Demo = () => {
             </p>
           </div>
         </div>
+        {test.map((el) => (
+          <div className="demo-card">
+            <div className="demo-header">
+              <img src={el.image} alt="art" />
+            </div>
+            <div className="demo-middle">
+              <span>{el.title}</span>
+            </div>
+            <div className="demo-footer">
+              <p>{el.description}</p>
+            </div>
+          </div>
+        ))}
       </div>
     </>
   );
