@@ -3,7 +3,7 @@ import { useHistory } from "react-router-dom";
 import { useAuth } from "../../contexts/AuthContext";
 import Navbar from "../UI/Navbar/Navbar";
 
-import axios from "axios";
+// import axios from "axios";
 import Image from "../../assets/images/auth/signup/signup.jpg";
 
 const Signup = () => {
