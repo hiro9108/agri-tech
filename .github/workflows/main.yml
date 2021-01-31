@@ -9,10 +9,11 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - run: cd client && npm install && npm run build
+        env:
+          REACT_APP_FIREBASE_API_KEY: "${{ secrets.REACT_APP_FIREBASE_API_KEY }}"
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: "${{ secrets.FIREBASE_TOKEN }}"
-          REACT_APP_FIREBASE_API_KEY: "${{ secrets.REACT_APP_FIREBASE_API_KEY }}"
           firebaseServiceAccount: "${{ secrets.FIREBASE_SERVICE_ACCOUNT_AGRI_TECH_C0C30 }}"
           channelId: live
           projectId: agri-tech-c0c30
