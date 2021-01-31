@@ -33,12 +33,12 @@ const Signup = () => {
       // firebase
       await signup(email, password);
       // postgres
-      await axios.post("http://localhost:8000/api/", {
-        first_name: firstName,
-        last_name: lastName,
-        email: email,
-        password: password,
-      });
+      // await axios.post("http://localhost:8000/api/", {
+      //   first_name: firstName,
+      //   last_name: lastName,
+      //   email: email,
+      //   password: password,
+      // });
 
       alert("Successfuly!!");
       // for test
