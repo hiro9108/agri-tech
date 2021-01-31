@@ -1,12 +1,26 @@
 import React, { useRef } from "react";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
+import { useAuth } from "../../../contexts/AuthContext";
+
 import logo from "../../../assets/images/logo.png";
 
-const Navbar = () => {
+const Navbar = (props) => {
+  const { logout } = useAuth();
+  const history = useHistory();
+
   const menuRef = useRef();
   const menuIconRef = useRef();
   const closeIconRef = useRef();
   const backScreenRef = useRef();
+
+  const logoutHandler = async () => {
+    try {
+      await logout();
+      history.push("/");
+    } catch {
+      console.log("logout error");
+    }
+  };
 
   const commonHandler = (primary, secondary) => {
     menuIconRef.current.className = `nav--menuIcon ${primary}`;
@@ -31,24 +45,29 @@ const Navbar = () => {
     <>
       <nav className="nav">
         <div className="nav--logo">
-          <Link to="/">
-            <img className="nav--logo--image" src={logo} alt="logo" />
-          </Link>
+          <img className="nav--logo--image" src={logo} alt="logo" />
         </div>
         <div className="nav--menu close" ref={menuRef}>
           <ul className="nav--items">
-            <li className="nav--items--item">
-              <Link to="/">home</Link>
-            </li>
-            <li className="nav--items--item">
-              <Link to="/signup">signup</Link>
-            </li>
-            <li className="nav--items--item">
-              <Link to="/signin">signin</Link>
-            </li>
-            <li className="nav--items--item">
-              <Link to="/demo">demo</Link>
-            </li>
+            {props.loginStatus ? (
+              <>
+                <li className="nav--items--item">
+                  <Link onClick={logoutHandler}>logout</Link>
+                </li>
+              </>
+            ) : (
+              <>
+                <li className="nav--items--item">
+                  <Link to="/">home</Link>
+                </li>
+                <li className="nav--items--item">
+                  <Link to="/signup">signup</Link>
+                </li>
+                <li className="nav--items--item">
+                  <Link to="/signin">signin</Link>
+                </li>
+              </>
+            )}
           </ul>
         </div>
         <div

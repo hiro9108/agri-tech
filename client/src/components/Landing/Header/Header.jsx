@@ -24,7 +24,7 @@ const Header = () => {
 
   return (
     <header className="header">
-      <Navbar />
+      <Navbar loginStatus={false} />
       <div className="header--main">
         <div className="header--main--title">
           <h1 className="header--main--title--text">Agriculture</h1>
