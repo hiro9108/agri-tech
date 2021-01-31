@@ -16,6 +16,10 @@ const Signin = () => {
 
   useEffect(() => {
     window.scrollTo(0, 0);
+
+    return () => {
+      setTimeout(() => console.log("Temporary signin"), 1000);
+    };
   }, []);
 
   const submitHandler = async (e) => {
@@ -26,9 +30,11 @@ const Signin = () => {
       await signin(email, password);
       alert("Signin Successfuly!!");
       // for test
-      history.push("/demo");
+      history.push("/dashboard");
     } catch {
-      setError("Cannot Registe");
+      setError("Cannot signin. Please check again.");
+      setEmail("");
+      setPassword("");
     }
 
     setLoading(false);
@@ -43,9 +49,9 @@ const Signin = () => {
       await signin("test@test.com", "1qazxsw2");
       alert("Signin Successfuly as Test User!!");
       // for test
-      history.push("/demo");
+      history.push("/dashboard");
     } catch {
-      setError("Cannot Registe");
+      setError("Cannot signin. Please check again.");
     }
 
     setLoading(false);
@@ -61,13 +67,15 @@ const Signin = () => {
             <div className="auth--container--image">
               <img src={Image} alt="signup" />
             </div>
-            <div className="card auth--container--form">
+            <div className="auth--container--form">
               <h2 className="auth--container--form--title">Sign In</h2>
               <form
                 className="auth--container--form--group"
                 onSubmit={submitHandler}
               >
-                {error && <p>{error}</p>}
+                {error && (
+                  <p className="auth--container--form--error">{error}</p>
+                )}
                 <div className="auth--container--form--content">
                   <input
                     type="text"

@@ -31,11 +31,18 @@
       }
     }
     &--form {
+      position: relative;
       flex: 1;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      &--error {
+        position: absolute;
+        color: rgb(220, 0, 0);
+        background-color: $color-white;
+        transform: translateY(-48px);
+      }
       &--title {
         color: $color-white;
         font-size: 2.5rem;
@@ -57,7 +64,7 @@
           &:focus ~ span,
           &:valid ~ span {
             transform: translateY(-24px);
-            color: rgb(218, 0, 0);
+            color: rgb(220, 0, 0);
           }
         }
         input[type="submit"] {

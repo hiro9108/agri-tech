@@ -31,6 +31,11 @@ $section-secondary-background-color: linear-gradient(
   rgb(50, 50, 50)
 );
 
+/* color for app pages */
+$app-body-background: rgba(211, 211, 211, 0.3);
+$app-card-background: rgb(248, 255, 246);
+$app-middle-background: rgb(225, 224, 167);
+
 /* padding, margin */
 $navbar-padding: 0 5vw;
 $section-padding: 4rem 5vw;
