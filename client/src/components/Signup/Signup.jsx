@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { useHistory } from "react-router-dom";
 import { useAuth } from "../../contexts/AuthContext";
+import { api } from "../../api/api";
 import Navbar from "../UI/Navbar/Navbar";
 
-import axios from "axios";
 import Image from "../../assets/images/auth/signup/signup.jpg";
 
 const reg = /^[A-Za-z0-9]{1}[A-Za-z0-9_.-]*@{1}[A-Za-z0-9_.-]{1,}\.[A-Za-z0-9]{1,}$/;
@@ -14,7 +14,7 @@ const Signup = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [passwordConformation, setPasswordConformation] = useState("");
-  const { signup, currentUser } = useAuth();
+  const { signup } = useAuth();
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
 
@@ -48,7 +48,7 @@ const Signup = () => {
       // firebase
       await signup(email, password).then((user) => {
         // postgres
-        axios.post("http://localhost:8000/api/", {
+        api.post("/users/", {
           id: user.user.uid,
           first_name: firstName,
           last_name: lastName,

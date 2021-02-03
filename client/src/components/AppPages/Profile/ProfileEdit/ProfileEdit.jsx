@@ -1,14 +1,15 @@
 import React, { useState } from "react";
+import { useAuth } from "../../../../contexts/AuthContext";
 import { useHistory } from "react-router-dom";
 import { storage } from "../../../../firebase";
+import { api } from "../.././../../api/api";
 import Navbar from "../../../UI/Navbar/Navbar";
-
-import axios from "axios";
 
 const ProfileEdit = () => {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [file, setFile] = useState();
+  const { currentUser } = useAuth();
 
   const history = useHistory();
 
@@ -21,14 +22,17 @@ const ProfileEdit = () => {
       .then(async () => {
         // Get image url.
         const imgUrl = await fileRef.getDownloadURL();
-
-        const res = await axios.post("http://localhost:8000/api/", {
+        const res = await api.patch(`/users/${currentUser.uid}/`, {
+          id: currentUser.uid,
           first_name: firstName,
           last_name: lastName,
           avatar: imgUrl,
         });
         if (res.status === 200) {
-          history.push("/dashboard");
+          alert("Update profile successfuly!!");
+          history.push("/profile");
+        } else {
+          alert("Cannot update!");
         }
       })
       .catch((err) => console.log(`Cannot upload file. Message: ${err}`));

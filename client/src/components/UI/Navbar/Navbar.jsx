@@ -55,6 +55,9 @@ const Navbar = (props) => {
                   <Link to="/dashboard">dashboard</Link>
                 </li>
                 <li className="nav--items--item">
+                  <Link to="/post">post</Link>
+                </li>
+                <li className="nav--items--item">
                   <Link to="/profile">profile</Link>
                 </li>
                 <li className="nav--items--item">
