@@ -26,6 +26,7 @@ const Post = () => {
         setCategory(categoriesResponse.data[0].id);
 
         const tagsResponse = await api.get("/tags-list/");
+
         setTagsData(tagsResponse.data);
       } catch (err) {
         console.log(`Cannot get data: ${err}`);
@@ -46,9 +47,9 @@ const Post = () => {
           title: title,
           description: description,
           image: imgUrl,
-          user_id: currentUser.uid,
-          category_id: category,
-          tags: tag,
+          user: currentUser.uid,
+          category: category,
+          // tags: tag,
         });
         if (res.status === 200) {
           alert("Create post successfuly!!");

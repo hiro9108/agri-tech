@@ -54,9 +54,9 @@ class Post(models.Model):
     created_at = models.DateTimeField(auto_now_add=True, blank=False, null=False, editable=False)
     updated_at = models.DateTimeField(auto_now=True, blank=False, null=False, editable=False)
 
-    user_id = models.ForeignKey(User, on_delete=models.CASCADE)
-    category_id = models.ForeignKey(Category, on_delete=models.CASCADE)
-    event_id = models.OneToOneField(Event, blank=True, null=True, on_delete=models.CASCADE)
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    category = models.ForeignKey(Category, on_delete=models.CASCADE)
+    event = models.OneToOneField(Event, blank=True, null=True, on_delete=models.CASCADE)
     tags = models.ManyToManyField(Tag, blank=True)
     likes = models.ManyToManyField(User, blank=True, related_name="likes")
 
