@@ -1,10 +1,8 @@
 import React, { useState, useEffect } from "react";
-import { useAuth } from "../../../contexts/AuthContext";
 import { api } from "../../../api/api";
 import Navbar from "../../UI/Navbar/Navbar";
 
 const Dashboard = () => {
-  const { currentUser } = useAuth();
   const [tagsData, setTagsData] = useState([]);
   const [initalPostData, setInitalPostData] = useState([]);
   const [postsData, setPostsData] = useState([]);
@@ -54,15 +52,6 @@ const Dashboard = () => {
       <div className="dashboard">
         <Navbar loginStatus={true} />
         <div className="dashboard--tagbar">
-          {/* Search */}
-          <div className="dashboard--tagbar--tag" onClick={getAllPosts}>
-            <input
-              type="search"
-              placeholder="Search..."
-              onChange={searchPosts}
-            />
-          </div>
-          {/*  */}
           <div className="dashboard--tagbar--tag" onClick={getAllPosts}>
             <span>#</span>
             <h3>All</h3>
@@ -79,24 +68,26 @@ const Dashboard = () => {
             </div>
           ))}
         </div>
+        {/* Search */}
+        <div className="dashboard--tagbar--search">
+          <input type="search" placeholder="Search..." onChange={searchPosts} />
+        </div>
+        {/*  */}
         <div className="dashboard--container">
           {postsData.map((el) => (
             <div className="dashboard--card" key={el.id.toString()}>
-              <div className="dashboard--category">
-                <h2>{el.title}</h2>
-              </div>
               <div className="dashboard--header">
                 <img src={el.image} alt="art" />
               </div>
               <div className="dashboard--middle">
-                <span>{el.user_id}</span>
+                <h2>{el.title}</h2>
               </div>
               <div className="dashboard--description">
                 <p>{el.description}</p>
               </div>
               <div className="dashboard--footer">
-                <div className="detail">detai</div>
-                <div className="detail">detai</div>
+                <div className="dashboard--footer--detail">Detail</div>
+                <div className="dashboard--footer--detail">See More</div>
               </div>
             </div>
           ))}

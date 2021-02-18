@@ -1,4 +1,4 @@
-.profile {
+.post {
   position: relative;
   height: 100vh;
 
@@ -17,6 +17,17 @@
     height: 450px;
     background-color: $app-card-background;
     box-shadow: 2px 2px 6px rgba($color-black, 0.2);
+    input[type="text"],
+    textarea {
+      width: 90%;
+      font-size: 1.5rem;
+      margin: 1rem 0;
+      padding: 0.5rem;
+      outline: none;
+      border: 1px solid $app-middle-background;
+      font-family: "Josefin Sans", sans-serif;
+      resize: none;
+    }
   }
 
   &--header {
@@ -31,9 +42,20 @@
     img {
       padding: 0 3.5rem;
     }
+    select {
+      margin: 1rem 0;
+      padding: 0.5rem;
+      font-size: 1rem;
+      width: 90%;
+      background-color: $color-white;
+      font-family: "Josefin Sans", sans-serif;
+      outline: none;
+      border: 1px solid $app-middle-background;
+    }
   }
 
   &--title {
+    padding: 1rem 0;
     font-weight: 300;
     padding-bottom: 0.5rem;
   }

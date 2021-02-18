@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import { useAuth } from "../../../contexts/AuthContext";
 import { api } from "../../../api/api";
 import Navbar from "../../UI/Navbar/Navbar";
@@ -10,6 +10,8 @@ import AvatarDefaultImage from "../../../assets/images/appPages/defaultAvatar.jp
 const Profile = () => {
   const { currentUser } = useAuth();
   const [userInfo, setUserInfo] = useState({});
+
+  const history = useHistory();
 
   useEffect(() => {
     (async () => {
@@ -38,10 +40,11 @@ const Profile = () => {
                 </span>
               </div>
               <div className="profile--footer">
-                <p>
-                  Come to the launch on March 3, 2020. Anywhere, Any City | 10am
-                  to 6pm
-                </p>
+                <input
+                  type="button"
+                  onClick={() => history.push("/edit")}
+                  value="EDIT"
+                />
               </div>
             </div>
           </Link>

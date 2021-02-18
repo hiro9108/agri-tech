@@ -6,11 +6,6 @@ class UserSerializer(serializers.ModelSerializer):
         model = User
         fields = '__all__'
 
-class PostSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Post
-        fields = '__all__'
-
 class CategorySerializer(serializers.ModelSerializer):
     class Meta:
         model = Category
@@ -20,3 +15,10 @@ class TagSerializer(serializers.ModelSerializer):
     class Meta:
         model = Tag
         fields = '__all__'
+
+class PostSerializer(serializers.ModelSerializer):
+    # tags = TagSerializer(many=True)
+    # print(tags)
+    class Meta:
+        model = Post
+        fields = ('id', 'title', 'description', 'image', 'user', 'category', 'tags')

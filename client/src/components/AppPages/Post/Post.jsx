@@ -11,8 +11,8 @@ const Post = () => {
   const [file, setFile] = useState();
   const [category, setCategory] = useState();
   const [categoriesData, setCategoriesData] = useState([]);
-  const [tag, setTag] = useState();
-  const [tagsData, setTagsData] = useState([]);
+  // const [tag, setTag] = useState();
+  // const [tagsData, setTagsData] = useState([]);
   const { currentUser } = useAuth();
 
   const history = useHistory();
@@ -25,9 +25,8 @@ const Post = () => {
         setCategoriesData(categoriesResponse.data);
         setCategory(categoriesResponse.data[0].id);
 
-        const tagsResponse = await api.get("/tags-list/");
-
-        setTagsData(tagsResponse.data);
+        // const tagsResponse = await api.get("/tags-list/");
+        // setTagsData(tagsResponse.data);
       } catch (err) {
         console.log(`Cannot get data: ${err}`);
       }
@@ -49,7 +48,6 @@ const Post = () => {
           image: imgUrl,
           user: currentUser.uid,
           category: category,
-          // tags: tag,
         });
         if (res.status === 200) {
           alert("Create post successfuly!!");
@@ -65,30 +63,37 @@ const Post = () => {
     setCategory(e.target.value);
   };
 
-  const getTagHandler = (e) => {
-    setTag(e.target.value);
-  };
+  // const getTagHandler = (e) => {
+  //   setTag(e.target.value);
+  // };
 
   return (
     <>
-      <div className="profile-edit">
+      <div className="post">
         <Navbar loginStatus={true} />
-        <div className="profile-edit--container">
-          <div className="profile-edit--card">
-            <div className="profile-edit--header">
-              <h2 className="profile-edit--title">Create New Post</h2>
+        <div className="post--container">
+          <div className="post--card">
+            <div className="post--header">
+              <h2 className="post--title">Create New Post</h2>
               <input
                 type="text"
                 placeholder="Title"
                 onChange={(e) => setTitle(e.target.value)}
                 value={title}
               />
-              <input
-                type="text"
-                placeholder="Last Name"
+              <textarea
+                cols="30"
+                rows="10"
+                placeholder="Description"
                 onChange={(e) => setDescription(e.target.value)}
                 value={description}
               />
+              {/* <input
+                type="text"
+                placeholder="Description"
+                onChange={(e) => setDescription(e.target.value)}
+                value={description}
+              /> */}
               <select onChange={getCategoryHandler}>
                 {categoriesData.map((el) => (
                   <option value={el.id} key={el.id.toString()}>
@@ -96,22 +101,22 @@ const Post = () => {
                   </option>
                 ))}
               </select>
-              <select onChange={getTagHandler}>
+              {/* <select onChange={getTagHandler}>
                 <option value="">What's a tag?</option>
                 {tagsData.map((el) => (
                   <option value={el.id} key={el.id.toString()}>
                     {el.tag}
                   </option>
                 ))}
-              </select>
+              </select> */}
             </div>
-            <div className="profile-edit--middle">
+            <div className="post--middle">
               <input type="file" onChange={(e) => setFile(e.target.files[0])} />
             </div>
-            <div className="profile-edit--footer">
+            <div className="post--footer">
               <input
                 type="button"
-                onClick={() => history.push("/profile")}
+                onClick={() => history.push("/dashboard")}
                 value="BACK"
               />
               <input

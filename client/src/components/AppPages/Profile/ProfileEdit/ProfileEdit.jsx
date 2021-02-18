@@ -45,7 +45,7 @@ const ProfileEdit = () => {
         <div className="profile-edit--container">
           <div className="profile-edit--card">
             <div className="profile-edit--header">
-              <h2 className="profile-edit--title">profile edit</h2>
+              <h2 className="profile-edit--title">Profile Edit</h2>
               <input
                 type="text"
                 placeholder="First Name"
