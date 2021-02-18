@@ -14,12 +14,12 @@ const Header = () => {
     //   blockRef.current.style.animationDelay = `${i * 0.05}s`;
     // }
     // console.log(blockRef.current);
-    const wrap = document.getElementsByClassName("header--wrap");
-    const blocks = document.getElementsByClassName("header--wrap--block");
-    for (let i = 1; i < 400; i++) {
-      wrap[0].innerHTML += `<div class="header--wrap--block"/>`;
-      blocks[i].style.animationDelay = `${i * 0.05}s`;
-    }
+    // const wrap = document.getElementsByClassName("header--wrap");
+    // const blocks = document.getElementsByClassName("header--wrap--block");
+    // for (let i = 1; i < 400; i++) {
+    //   wrap[0].innerHTML += `<div class="header--wrap--block"/>`;
+    //   blocks[i].style.animationDelay = `${i * 0.05}s`;
+    // }
   }, []);
 
   return (

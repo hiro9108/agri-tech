@@ -5,7 +5,10 @@ import "../sass/main.scss";
 import Landing from "./Landing/Landing";
 import Signup from "./Signup/Signup";
 import Signin from "./Signin/Signin";
-import Demo from "./Demo/Demo";
+import Dashboard from "./AppPages/Dashboard/Dashboard";
+import Post from "./AppPages/Post/Post";
+import Profile from "./AppPages/Profile/Profile";
+import ProfileEdit from "./AppPages/Profile/ProfileEdit/ProfileEdit";
 import { AuthProvider } from "../contexts/AuthContext";
 
 const App = () => {
@@ -17,7 +20,10 @@ const App = () => {
             <Route exact path="/" component={Landing} />
             <Route exact path="/signup" component={Signup} />
             <Route exact path="/signin" component={Signin} />
-            <PrivateRoute exact path="/demo" component={Demo} />
+            <PrivateRoute exact path="/dashboard" component={Dashboard} />
+            <PrivateRoute exact path="/post" component={Post} />
+            <PrivateRoute exact path="/profile" component={Profile} />
+            <PrivateRoute exact path="/profile/edit" component={ProfileEdit} />
           </Switch>
         </Router>
       </AuthProvider>

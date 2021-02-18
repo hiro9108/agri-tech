@@ -52,7 +52,18 @@ const Navbar = (props) => {
             {props.loginStatus ? (
               <>
                 <li className="nav--items--item">
-                  <Link onClick={logoutHandler}>logout</Link>
+                  <Link to="/dashboard">dashboard</Link>
+                </li>
+                <li className="nav--items--item">
+                  <Link to="/post">post</Link>
+                </li>
+                <li className="nav--items--item">
+                  <Link to="/profile">profile</Link>
+                </li>
+                <li className="nav--items--item">
+                  <Link to="#" onClick={logoutHandler}>
+                    logout
+                  </Link>
                 </li>
               </>
             ) : (

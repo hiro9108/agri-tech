@@ -21,3 +21,9 @@
 
 /* Signup/in pages */
 @import "pages/auth/form";
+
+/* App pages */
+@import "pages/appPages/dashboard";
+@import "pages/appPages/post";
+@import "pages/appPages/profile";
+@import "pages/appPages/profileEdit";
